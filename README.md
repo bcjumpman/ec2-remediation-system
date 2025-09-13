@@ -48,24 +48,24 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
   - **AI Search** → retrieve EC2 remediation article.  
   - **Slack Action** → send article to DevOps Slack channel via webhook.  
   - **Incident Action** → create an incident in ServiceNow to document the failure.  
-![Automated workflow in Flow Designer](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=Flow%20Designer%20Actions.png)
+![Automated workflow in Flow Designer](https://github.com/bcjumpman/ec2-remediation-system/blob/91d24b76bee3d888ae224b850dae265d1d443626/images/Flow%20Designer%20OFF.png)
 
 ### 4. DevOps Workflow
 - Implemented a **UI Action**: `Trigger EC2 Remediation`.  
 - The button calls a **Script Include** (`EC2RemediationHelper`) via GlideAjax.  
 - Script Include executes an API call to AWS to restart the failed instance.  
 - Remediation attempt automatically logged in the Remediation Log table.  
-![UI Button Trigger](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=EC2%20Trigger%20Button.png)
+![UI Button Trigger](https://github.com/bcjumpman/ec2-remediation-system/blob/91d24b76bee3d888ae224b850dae265d1d443626/images/EC2%20Trigger%20Button.png)
 
 ---
 
 ## Architecture Diagram
 
-See `Diagram.png` for a complete workflow view:  
 - EC2 failure detection  
 - ServiceNow integration (EC2 Instance + Remediation Log tables)  
 - Flow Designer automation (AI Search → Slack → Incident)  
 - DevOps manual remediation via UI Action
+![Architecture Diagram](https://github.com/bcjumpman/ec2-remediation-system/blob/91d24b76bee3d888ae224b850dae265d1d443626/Diagram.png)
 
 
 ---
