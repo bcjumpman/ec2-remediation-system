@@ -68,18 +68,6 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
 - DevOps manual remediation via UI Action
 ![Architecture Diagram](https://github.com/bcjumpman/ec2-remediation-system/blob/5fbe865f7f533cf16d3f5396759935893d630e96/Diagram.png)
 
-
----
-
-## Optimization In The Future
-
-- Added ACLs for **tables**, **UI Action**, and **Script Include** to enforce security.  
-- Optimized the Flow Designer workflow with a “for every update” trigger for reliability.  
-- Enhanced Slack notifications with:  
-  - Direct link to the incident record.  
-  - Direct link to the knowledge article.  
-- Standardize required fields on custom tables for consistency.  
-
 ---
 
 ## DevOps Usage
@@ -92,3 +80,12 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
 ![Slack Notification](https://github.com/bcjumpman/ec2-remediation-system/blob/main/images/Slack%20Notification.png)
 
 ---
+
+## Optimization For The Future
+
+- Added ACLs for **tables**, **UI Action**, and **Script Include** to enforce security.  
+- Optimized the Flow Designer workflow with a “for every update” trigger for reliability.  
+- Enhanced Slack notifications with:  
+  - Direct link to the incident record.  
+  - Direct link to the knowledge article.  
+- Standardize required fields on custom tables for consistency.  
