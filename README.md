@@ -23,10 +23,14 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
 ## Implementation Steps
 
 ### 1. Core Application Setup
-- Created a **scoped application**: `EC2 Monitoring and Remediation`.  
+- Created a **scoped application**: `EC2 Monitoring and Remediation`.
+![Scoped Application](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=EC2%20Application%20Creation.png)
+
 - Added two custom tables:  
-  - **EC2 Instance** – stores health status and metadata for EC2 instances.  
-  - **Remediation Log** – records every remediation attempt (API response, HTTP status, success flag).  
+  - **EC2 Instance** – stores health status and metadata for EC2 instances.
+  ![EC2 Instance table](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=9%20minutes%20ago-,EC2Table.png)
+  - **Remediation Log** – records every remediation attempt (API response, HTTP status, success flag).
+  ![Remediation Log table](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=RemediationLogTable.png)
 - Configured secure integration with AWS monitoring servers using:  
   - `Connection & Credential Alias`  
   - `HTTP Connection`  
@@ -35,20 +39,23 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
 ### 2. Knowledge Integration
 - Authored a knowledge article describing EC2 remediation steps.  
 - Published the article in a Knowledge Base accessible to AI Search.  
-- Configured AI Search to return this article when the flow is triggered.  
+- Configured AI Search to return this article when the flow is triggered.
+![Knowledge Article](https://github.com/bcjumpman/ec2-remediation-system/blob/main/images/Knowledge%20Base.png)
 
 ### 3. Automated Workflow (Flow Designer)
-- **Trigger**: EC2 Instance status updates to `OFF`.  
+- **Trigger**: EC2 Instance status updates to `OFF`.
 - **Actions**:  
   - **AI Search** → retrieve EC2 remediation article.  
   - **Slack Action** → send article to DevOps Slack channel via webhook.  
   - **Incident Action** → create an incident in ServiceNow to document the failure.  
+![Automated workflow in Flow Designer](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=Flow%20Designer%20Actions.png)
 
 ### 4. DevOps Workflow
 - Implemented a **UI Action**: `Trigger EC2 Remediation`.  
 - The button calls a **Script Include** (`EC2RemediationHelper`) via GlideAjax.  
 - Script Include executes an API call to AWS to restart the failed instance.  
 - Remediation attempt automatically logged in the Remediation Log table.  
+![UI Button Trigger](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=EC2%20Trigger%20Button.png)
 
 ---
 
@@ -60,18 +67,17 @@ See `Diagram.png` for a complete workflow view:
 - Flow Designer automation (AI Search → Slack → Incident)  
 - DevOps manual remediation via UI Action
 
-![System Overview](https://github.com/bcjumpman/ec2-remediation-system/blob/e768a35210159f7cdf58c0157c28dd79a110d44c/Diagram.png)
 
 ---
 
-## Optimization
+## Optimization In The Future
 
 - Added ACLs for **tables**, **UI Action**, and **Script Include** to enforce security.  
 - Optimized the Flow Designer workflow with a “for every update” trigger for reliability.  
 - Enhanced Slack notifications with:  
   - Direct link to the incident record.  
   - Direct link to the knowledge article.  
-- Standardized required fields on custom tables for consistency.  
+- Standardize required fields on custom tables for consistency.  
 
 ---
 
@@ -82,7 +88,6 @@ See `Diagram.png` for a complete workflow view:
 3. Engineer opens the associated EC2 Instance record in ServiceNow.  
 4. Click **Trigger EC2 Remediation** to restart the instance.  
 5. Verify remediation success in the **Remediation Log** table (e.g., HTTP 201 response).  
-
-This process provides speed, visibility, and accountability across the full incident lifecycle.  
+![Slack Notification](https://github.com/bcjumpman/ec2-remediation-system/blob/main/images/Slack%20Notification.png)
 
 ---
