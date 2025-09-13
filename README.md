@@ -14,7 +14,9 @@ When an EC2 instance fails, the AWS integration server updates the EC2 Instance 
 - Retrieves a knowledge article with step-by-step remediation instructions using AI Search.  
 - Sends the article and context to the DevOps Slack channel.  
 - Provides a one-click remediation option from the EC2 Instance record.  
-- Logs all remediation attempts in a dedicated Remediation Log table.  
+- Logs all remediation attempts in a dedicated Remediation Log table.
+
+![System Overview](https://github.com/bcjumpman/ec2-remediation-system/blob/e768a35210159f7cdf58c0157c28dd79a110d44c/Diagram.png)
 
 This workflow reduces downtime, improves DevOps response speed, and creates visibility for both technical teams and auditors.  
 
