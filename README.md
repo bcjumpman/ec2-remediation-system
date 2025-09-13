@@ -66,7 +66,7 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
 - ServiceNow integration (EC2 Instance + Remediation Log tables)  
 - Flow Designer automation (AI Search → Slack → Incident)  
 - DevOps manual remediation via UI Action
-![Architecture Diagram](https://github.com/bcjumpman/ec2-remediation-system/blob/91d24b76bee3d888ae224b850dae265d1d443626/Diagram.png)
+![Architecture Diagram](https://github.com/bcjumpman/ec2-remediation-system/blob/5fbe865f7f533cf16d3f5396759935893d630e96/Diagram.png)
 
 
 ---
