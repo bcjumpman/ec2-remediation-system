@@ -16,8 +16,6 @@ When an EC2 instance fails, the AWS integration server updates the EC2 Instance 
 - Provides a one-click remediation option from the EC2 Instance record.  
 - Logs all remediation attempts in a dedicated Remediation Log table.
 
-![System Overview](https://github.com/bcjumpman/ec2-remediation-system/blob/e768a35210159f7cdf58c0157c28dd79a110d44c/Diagram.png)
-
 This workflow reduces downtime, improves DevOps response speed, and creates visibility for both technical teams and auditors.  
 
 ---
@@ -60,7 +58,9 @@ See `Diagram.png` for a complete workflow view:
 - EC2 failure detection  
 - ServiceNow integration (EC2 Instance + Remediation Log tables)  
 - Flow Designer automation (AI Search → Slack → Incident)  
-- DevOps manual remediation via UI Action  
+- DevOps manual remediation via UI Action
+
+![System Overview](https://github.com/bcjumpman/ec2-remediation-system/blob/e768a35210159f7cdf58c0157c28dd79a110d44c/Diagram.png)
 
 ---
 
