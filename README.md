@@ -52,7 +52,8 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
 
 ### 4. DevOps Workflow
 - Implemented a **UI Action**: `Trigger EC2 Remediation`.  
-- The button calls a **Script Include** (`EC2RemediationHelper`) via GlideAjax.  
+- The button calls a **Script Include** (`EC2RemediationHelper`) via GlideAjax.
+![Script Includes EC2](https://github.com/bcjumpman/ec2-remediation-system/blob/be754dea4ca59f214b38022f41cba19a4299ba7c/images/Script%20Include%20EC2.png)
 - Script Include executes an API call to AWS to restart the failed instance.  
 - Remediation attempt automatically logged in the Remediation Log table.  
 ![UI Button Trigger](https://github.com/bcjumpman/ec2-remediation-system/blob/91d24b76bee3d888ae224b850dae265d1d443626/images/EC2%20Trigger%20Button.png)
