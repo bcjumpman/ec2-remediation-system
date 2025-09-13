@@ -24,7 +24,7 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
 
 ### 1. Core Application Setup
 - Created a **scoped application**: `EC2 Monitoring and Remediation`.
-![Scoped Application](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=EC2%20Application%20Creation.png)
+![Scoped Application](https://github.com/bcjumpman/ec2-remediation-system/blob/45050669fc8c6c904c5be16198b8bd7bf5ac3426/images/EC2%20Application%20Creation.png)
 
 - Added two custom tables:  
   - **EC2 Instance** – stores health status and metadata for EC2 instances.
