@@ -28,9 +28,9 @@ This workflow reduces downtime, improves DevOps response speed, and creates visi
 
 - Added two custom tables:  
   - **EC2 Instance** – stores health status and metadata for EC2 instances.
-  ![EC2 Instance table](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=9%20minutes%20ago-,EC2Table.png)
+![EC2 Instance table](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=9%20minutes%20ago-,EC2Table.png)
   - **Remediation Log** – records every remediation attempt (API response, HTTP status, success flag).
-  ![Remediation Log table](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=RemediationLogTable.png)
+![Remediation Log table](https://github.com/bcjumpman/ec2-remediation-system/tree/main/images#:~:text=RemediationLogTable.png)
 - Configured secure integration with AWS monitoring servers using:  
   - `Connection & Credential Alias`  
   - `HTTP Connection`  
